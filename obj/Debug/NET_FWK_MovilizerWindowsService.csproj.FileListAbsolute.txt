@@ -1,0 +1,36 @@
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csprojResolveAssemblyReference.cache
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\obj\Debug\MWS.WindowsService.MovilizerWindowsService.resources
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csproj.GenerateResource.Cache
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.dll
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\bin\Debug\NET_FWK_MovilizerCryptoLib.dll
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\bin\Debug\NET_SRV_FWK_MovilizerClientCore.dll
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\bin\Debug\NET_SRV_UTL_MovilizerClientHelper.dll
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.dll
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\REL_2_1_0_CRYPT\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csprojResolveAssemblyReference.cache
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWS.WindowsService.MovilizerWindowsService.resources
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csproj.GenerateResource.Cache
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.dll
+C:\Users\Mario Mira\Documents\Projects\.NET Connector\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Documents\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.dll
+C:\Users\Mario Mira\Documents\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Documents\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csprojResolveAssemblyReference.cache
+C:\Users\Mario Mira\Documents\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWS.WindowsService.MovilizerWindowsService.resources
+C:\Users\Mario Mira\Documents\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csproj.GenerateResource.Cache
+C:\Users\Mario Mira\Documents\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.dll
+C:\Users\Mario Mira\Documents\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Documents\Work\Trainings\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.dll
+C:\Users\Mario Mira\Documents\Work\Trainings\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Documents\Work\Trainings\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csprojResolveAssemblyReference.cache
+C:\Users\Mario Mira\Documents\Work\Trainings\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWS.WindowsService.MovilizerWindowsService.resources
+C:\Users\Mario Mira\Documents\Work\Trainings\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csproj.GenerateResource.Cache
+C:\Users\Mario Mira\Documents\Work\Trainings\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.dll
+C:\Users\Mario Mira\Documents\Work\Trainings\Movilizer .NET Training\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Desktop\WebinarCode\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.dll
+C:\Users\Mario Mira\Desktop\WebinarCode\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\bin\Debug\MWSCore.pdb
+C:\Users\Mario Mira\Desktop\WebinarCode\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csprojResolveAssemblyReference.cache
+C:\Users\Mario Mira\Desktop\WebinarCode\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWS.WindowsService.MovilizerWindowsService.resources
+C:\Users\Mario Mira\Desktop\WebinarCode\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\NET_FWK_MovilizerWindowsService.csproj.GenerateResource.Cache
+C:\Users\Mario Mira\Desktop\WebinarCode\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.dll
+C:\Users\Mario Mira\Desktop\WebinarCode\NET Connector 2.1 without encryption\NET_FWK_MovilizerWindowsService\obj\Debug\MWSCore.pdb

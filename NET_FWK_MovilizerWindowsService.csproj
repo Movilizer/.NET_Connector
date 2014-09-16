@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C151203-4B21-424F-8749-E42E02E677F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MWS</RootNamespace>
+    <AssemblyName>MWSCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Log\ConsoleLog.cs" />
+    <Compile Include="Log\DatabaseLog.cs" />
+    <Compile Include="Log\LogInterface.cs" />
+    <Compile Include="Templates\DocumentDeleteTemplate.cs" />
+    <Compile Include="Templates\DocumentPoolUpdateTemplate.cs" />
+    <Compile Include="Templates\DocumentUpdateTemplate.cs" />
+    <Compile Include="Templates\MasterdataDeleteTemplate.cs" />
+    <Compile Include="Templates\MasterdataEntryTemplate.cs" />
+    <Compile Include="Templates\MasterdataPoolUpdateTemplate.cs" />
+    <Compile Include="Templates\MasterdataReferenceTemplate.cs" />
+    <Compile Include="Templates\MasterdataUpdateTemplate.cs" />
+    <Compile Include="Templates\ReplyQuestionTemplate.cs" />
+    <Compile Include="Helper\TemplateHelper.cs" />
+    <Compile Include="WebService\MovilizerWebServiceV11Service.cs" />
+    <Compile Include="WindowsService\Configuration.cs" />
+    <Compile Include="Data\DB\DAL.cs" />
+    <Compile Include="Data\DB\DBConnector.cs" />
+    <Compile Include="Data\DB\DBConstants.cs" />
+    <Compile Include="Data\DB\DBWrapper.cs" />
+    <Compile Include="Data\Manager.cs" />
+    <Compile Include="Helper\RegistryHelper.cs" />
+    <Compile Include="Helper\RegistryWOW6432.cs" />
+    <Compile Include="Log\LogFactory.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\DBHelper.cs" />
+    <Compile Include="Helper\SerializeHelper.cs" />
+    <Compile Include="Log\WindowsLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper\Singleton.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Helper\XmlHelper.cs" />
+    <Compile Include="Templates\AnswerItemTemplate.cs" />
+    <Compile Include="Templates\AnswerTemplate.cs" />
+    <Compile Include="Templates\MoveletSetTemplate.cs" />
+    <Compile Include="Templates\QuestionTemplate.cs" />
+    <Compile Include="Templates\ReplyMoveletTemplate.cs" />
+    <Compile Include="WebService\MovilizerWebService.cs" />
+    <Compile Include="WebService\MovilizerWebServiceConstants.cs" />
+    <Compile Include="WindowsService\MovilizerWindowsService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowsService\MovilizerWindowsService.Designer.cs">
+      <DependentUpon>MovilizerWindowsService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\MoveletTemplate.cs" />
+    <Compile Include="Templates\TemplateCache.cs" />
+    <Compile Include="WindowsService\MovilizerWindowsServiceInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WindowsService\MovilizerWindowsService.resx">
+      <DependentUpon>MovilizerWindowsService.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
