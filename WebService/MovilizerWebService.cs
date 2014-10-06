@@ -27,6 +27,7 @@ namespace MWS.WebService
         private List<MovilizerMoveletAssignmentDelete> _moveletDeleteAssignments;
 
         private List<MovilizerUploadDataContainer> _uploadDataContainers;
+        private List<MovilizerParticipantReset> _moveletParticipantReset;
 
         // pool templates
         private Dictionary<string, object> _masterdataPoolUpdateTemplates;
@@ -47,6 +48,7 @@ namespace MWS.WebService
             _moveletAssignments = new List<MovilizerMoveletAssignment>();
             _moveletDeletes = new List<MovilizerMoveletDelete>();
             _masterdataPoolUpdate = new List<MovilizerMasterdataPoolUpdate>();
+            _moveletParticipantReset = new List<MovilizerParticipantReset>();
             _documentPoolUpdate = new List<MovilizerDocumentPoolUpdate>();
             _moveletDeleteAssignments = new List<MovilizerMoveletAssignmentDelete>();
 
@@ -256,6 +258,19 @@ namespace MWS.WebService
                         // sleep for 10 seconds and try again
                         Thread.Sleep(10000);
                     }
+                    else if(Configuration.ForceRequeingOnError())
+                    {
+                        // Requeue waiting message
+                        LogFactory.Log.WriteWarning("Error exceeded 3 consecutive retries, reqeuing messages for further processing.");
+
+                        _moveletSets.AddRange(request.moveletSet);
+                        _moveletAssignments.AddRange(request.moveletAssignment);
+                        request.moveletDelete = _moveletDeletes.ToArray();
+                        request.masterdataPoolUpdate = _masterdataPoolUpdate.ToArray();
+                        request.moveletAssignmentDelete = _moveletDeleteAssignments.ToArray();
+                        request.documentPoolUpdate = _documentPoolUpdate.ToArray();
+                        request.participantReset = _moveletParticipantReset.ToArray();
+                    }
                 }
             }
 
@@ -327,6 +342,10 @@ namespace MWS.WebService
                 {
                     _moveletDeleteAssignments.Add(obj as MovilizerMoveletAssignmentDelete);
                 }
+                else if (obj is MovilizerParticipantReset)
+                {
+                    _moveletParticipantReset.Add(obj as MovilizerParticipantReset);
+                }
                 else if (obj is Queue)
                 {
                     ProcessOutboundQueue(obj as Queue);
@@ -381,6 +400,7 @@ namespace MWS.WebService
             request.masterdataPoolUpdate = _masterdataPoolUpdate.ToArray();
             request.moveletAssignmentDelete = _moveletDeleteAssignments.ToArray();
             request.documentPoolUpdate = _documentPoolUpdate.ToArray();
+            request.participantReset = _moveletParticipantReset.ToArray();
             
             // clear temps
             _moveletSets.Clear();
@@ -389,6 +409,7 @@ namespace MWS.WebService
             _masterdataPoolUpdate.Clear();
             _documentPoolUpdate.Clear();
             _moveletDeleteAssignments.Clear();
+            _moveletParticipantReset.Clear();
 
             // clear pools
             _masterdataPoolUpdateTemplates.Clear();

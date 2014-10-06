@@ -14,6 +14,7 @@ namespace MWS.WindowsService
 
         public MovilizerWindowsService(Manager manager)
         {
+            Configuration.ReadConfiguration(new RegistryConfigurator());
             _manager = manager;
 
             InitializeComponent();

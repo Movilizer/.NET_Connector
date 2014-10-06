@@ -7,9 +7,6 @@ namespace MWS.WindowsService
 {
     public static class Configuration
     {
-        private const string REGKEY_CONFIG = @"SOFTWARE\Movilitas\Movilizer\Service";
-
-
         #region Database Specific Settings
 
         private const string REGVAL_DB_DRIVER = @"Database Driver";
@@ -70,7 +67,8 @@ namespace MWS.WindowsService
         private static string _encryptionPassword;
         private static string _webServiceHost;
         private static string _webServiceProxy;
-
+        private static string _webServiceProtocol;
+        private static bool _forceRequeingOnError;
 
         public static long GetSystemId()
         {
@@ -97,9 +95,19 @@ namespace MWS.WindowsService
             return _webServiceHost;
         }
 
+        public static string GetWebServiceProtocol()
+        {
+            return _webServiceProtocol;
+        }
+
         public static string GetWebServiceProxy()
         {
             return _webServiceProxy;
+        }
+
+        public static bool ForceRequeingOnError()
+        {
+            return _forceRequeingOnError;
         }
 
         #endregion
@@ -128,76 +136,38 @@ namespace MWS.WindowsService
         #endregion
 
 
-        static Configuration()
+        /*static Configuration()
         {
             ReadConfigurationFromRegistry();
-        }
+        }*/
 
-        public static void ReadConfigurationFromRegistry()
+        public static void ReadConfiguration(IConfigurator configurator)
         {
             try
             {
                 // database specific settings
-                _databaseDriver         = ReadString(REGVAL_DB_DRIVER);
-                _databasePath           = ReadString(REGVAL_DB_PATH);
-                _databaseUser           = ReadString(REGVAL_DB_USER, "");
-                _databasePassword       = ReadString(REGVAL_DB_PASSWORD, _databaseUser);
-                _databaseParameters     = ReadString(REGVAL_DB_PARAMETERS, "");
+                _databaseDriver = configurator.DatabaseDriver;
+                _databasePath = configurator.DatabasePath;
+                _databaseUser = configurator.DatabaseUser;
+                _databasePassword = configurator.DatabasePassword;
+                _databaseParameters = configurator.DatabaseParameters;
 
                 // movilizer web service specific settings
-                _systemId               = ReadInt(REGVAL_SYSTEM_ID);
-                _systemPassword         = ReadString(REGVAL_SYSTEM_PASSWORD, "" + _systemId);
-
-                // encryption parameters
-                _encryptionAlgorithm    = ReadString(REGVAL_ENCRYPTION_ALGORITHM);
-                _encryptionPassword     = ReadString(REGVAL_ENCRYPTION_PASSWORD, _encryptionAlgorithm);
-
-                // connection settings
-                _webServiceHost         = ReadString(REGVAL_WEB_SERVICE_HOST);
-                _webServiceProxy        = ReadString(REGVAL_WEB_SERVICE_PROXY);
+                _systemId = configurator.SystemId;
+                _systemPassword = configurator.SystemPassword;
+                _webServiceProtocol = configurator.WebServiceProtocol;
+                _webServiceHost = configurator.WebServiceHost;
+                _webServiceProxy = configurator.WebServiceProxy;
 
                 // windows service settings
-                _serviceTimeInterval    = ReadInt(REGVAL_TIME_INTERVAL, "60000");                
-                _debugOutputPath        = ReadString(REGVAL_DEBUG_OUTPUT);
+                _serviceTimeInterval = configurator.ServiceTimeInterval;
+                _debugOutputPath = configurator.DebugOutputPath;
+                _forceRequeingOnError = configurator.ForceRequeingOnError;
             }
             catch (Exception e)
             {
                 throw e;
-            }         
+            }
         }
-
-        #region Local Registry Wrapper Methods
-
-        private static string ReadString(string name)
-        {
-            return RegistryHelper.ReadString(REGKEY_CONFIG, name);
-        }
-
-        private static string ReadProtectedString(string name, string entropy)
-        {
-            return RegistryHelper.ReadProtectedString(REGKEY_CONFIG, name, entropy);
-        }
-
-        private static string ReadProtectedString(string name, string defaultValue, string entropy)
-        {
-            return RegistryHelper.ReadProtectedString(REGKEY_CONFIG, name, defaultValue, entropy);
-        }
-
-        private static string ReadString(string name, string defaultValue)
-        {
-            return RegistryHelper.ReadString(REGKEY_CONFIG, name, defaultValue);
-        }
-
-        private static int ReadInt(string name)
-        {
-            return RegistryHelper.ReadInt(REGKEY_CONFIG, name);
-        }
-
-        private static int ReadInt(string name, string defaultValue)
-        {
-            return RegistryHelper.ReadInt(REGKEY_CONFIG, name, defaultValue);
-        }
-
-        #endregion
     }
 }

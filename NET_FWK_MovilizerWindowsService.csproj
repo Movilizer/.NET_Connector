@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="WindowsService\RegistryConfigurator.cs" />
     <Compile Include="Log\ConsoleLog.cs" />
     <Compile Include="Log\DatabaseLog.cs" />
     <Compile Include="Log\LogInterface.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Templates\ReplyMoveletTemplate.cs" />
     <Compile Include="WebService\MovilizerWebService.cs" />
     <Compile Include="WebService\MovilizerWebServiceConstants.cs" />
+    <Compile Include="WindowsService\IConfigurator.cs" />
     <Compile Include="WindowsService\MovilizerWindowsService.cs">
       <SubType>Component</SubType>
     </Compile>

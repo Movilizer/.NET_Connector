@@ -28,8 +28,9 @@ namespace MWS.WebService
 
         public static string GetWebServiceUrl()
         {
+            string webServiceProtocol = Configuration.GetWebServiceProtocol() ?? WS_PROTOCOL;
             string webServiceHost = Configuration.GetWebServiceHost();
-            return String.Format("{0}://{1}{2}", WS_PROTOCOL, webServiceHost, WS_RELATIVE_PATH);
+            return String.Format("{0}://{1}{2}", webServiceProtocol, webServiceHost, WS_RELATIVE_PATH);
         }
 
         public static WebProxy GetWebServiceProxy()
