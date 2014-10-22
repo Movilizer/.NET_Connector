@@ -101,6 +101,14 @@ namespace MWS.WebService
             _outQueue.Enqueue(moveletSet);
         }
 
+        public void EnqueueResetParticipant(string phone)
+        {
+            _moveletParticipantReset.Add(new MovilizerParticipantReset() 
+            { 
+                deviceAddress = phone
+            });
+        }
+
         public void EnqueueMoveletSet(MovilizerMoveletSet moveletSet, string uname, string phone)
         {
             // add a single participant
