@@ -28,7 +28,7 @@ namespace MWS.Log
             _logs = new ArrayList();
 
             // register logs
-            RegisterLog(Log);
+            // RegisterLog(Log);
         }
 
         public static void RegisterLog(LogInterface log)
