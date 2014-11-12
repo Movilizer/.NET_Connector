@@ -4,7 +4,7 @@ namespace MWS.Log
 {
     public class ConsoleLog : LogInterface
     {
-        private ConsoleLog()
+        public ConsoleLog()
         {
             // private constructor
         }
@@ -14,19 +14,19 @@ namespace MWS.Log
             Console.WriteLine(String.Format("{0}: {1}", timestamp, message));
         }
 
-        public void WriteInfo(string message)
+        public void WriteInfo(DateTime date, string message)
         {
-            WriteEntry(DateTime.Now, message);
+            this.WriteEntry(date, message);
         }
 
-        public void WriteWarning(string message)
+        public void WriteWarning(DateTime date, string message)
         {
-            WriteEntry(DateTime.Now, message);
+            this.WriteEntry(date, message);
         }
 
-        public void WriteError(string message)
+        public void WriteError(DateTime date, string message)
         {
-            WriteEntry(DateTime.Now, message);
+            this.WriteEntry(date, message);
         }
     }
 }

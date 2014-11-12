@@ -14,6 +14,7 @@ namespace MWS.WindowsService
 
         public MovilizerWindowsService(Manager manager)
         {
+            LogFactory.RegisterLog(new Log.WindowsLog());
             Configuration.ReadConfiguration(new RegistryConfigurator());
             _manager = manager;
 
