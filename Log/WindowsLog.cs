@@ -10,7 +10,7 @@ namespace MWS.Log
         private static string LOG_NAME = @"MovilizerLog";
 
 
-        private WindowsLog() 
+        public WindowsLog() 
         {
             if (SourceExists(LOG_SOURCE_OLD))
             {
@@ -35,49 +35,23 @@ namespace MWS.Log
             WriteEntry(String.Format("{0}: {1}", timestamp, message), logEntryType);
         }
 
-        public void WriteEntry(MovilizerStatusMessage statusMessage)
+        #region LogInterface Members
+
+        public void WriteInfo(DateTime date, string message)
         {
-            EventLogEntryType type;
-
-            switch (statusMessage.severity)
-            {
-                case 2: // warning=2
-                    type = EventLogEntryType.Warning;
-                    break;
-                case 3: case 4: // error=3, fatal=4
-                    type = EventLogEntryType.Error;
-                    break;
-                default: // debug=-1, info=1
-                    type = EventLogEntryType.Information;
-                    break;
-            }
-
-            WriteEntry(type, statusMessage.timestamp, statusMessage.message);
+            this.WriteEntry(EventLogEntryType.Information, date, message);
         }
 
-        public void WriteEntry(MovilizerMoveletError moveletError)
+        public void WriteWarning(DateTime date, string message)
         {
-            WriteEntry(EventLogEntryType.Error, moveletError.timestamp, moveletError.message);
+            this.WriteEntry(EventLogEntryType.Warning, date, message);
         }
 
-        public void WriteInfo(string message)
+        public void WriteError(DateTime date, string message)
         {
-            WriteEntry(EventLogEntryType.Information, DateTime.Now, message);
+            this.WriteEntry(EventLogEntryType.Error, date, message);
         }
 
-        public void WriteWarning(string message)
-        {
-            WriteEntry(EventLogEntryType.Warning, DateTime.Now, message);
-        }
-
-        public void WriteError(string message)
-        {
-            WriteEntry(EventLogEntryType.Error, DateTime.Now, message);
-        }
-
-        new public void WriteEntry(string message)
-        {
-            throw new InvalidOperationException("Please use following methods instead: WriteInfo, WriteWarning, WriteError");
-        }
+        #endregion
     }
 }

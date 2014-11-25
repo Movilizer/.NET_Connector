@@ -85,7 +85,6 @@
     <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="WindowsService\RegistryConfigurator.cs" />
     <Compile Include="Log\ConsoleLog.cs" />
-    <Compile Include="Log\DatabaseLog.cs" />
     <Compile Include="Log\LogInterface.cs" />
     <Compile Include="Templates\DocumentDeleteTemplate.cs" />
     <Compile Include="Templates\DocumentPoolUpdateTemplate.cs" />

@@ -269,7 +269,7 @@ namespace MWS.WebService
                     else if(Configuration.ForceRequeingOnError())
                     {
                         // Requeue waiting message
-                        LogFactory.Log.WriteWarning("Error exceeded 3 consecutive retries, reqeuing messages for further processing.");
+                        LogFactory.WriteWarning("Error exceeded 3 consecutive retries, reqeuing messages for further processing.");
 
                         _moveletSets.AddRange(request.moveletSet);
                         _moveletAssignments.AddRange(request.moveletAssignment);
@@ -293,7 +293,7 @@ namespace MWS.WebService
                 {
                     foreach (MovilizerStatusMessage statusMessage in statusMessages)
                     {
-                        LogFactory.Log.WriteEntry(statusMessage);
+                        LogFactory.WriteEntry(statusMessage);
                     }
                 }
 
@@ -303,7 +303,7 @@ namespace MWS.WebService
                 {
                     foreach (MovilizerMoveletError moveletError in moveletErrors)
                     {
-                        LogFactory.Log.WriteEntry(moveletError);
+                        LogFactory.WriteEntry(moveletError);
                     }  
                 }
             }

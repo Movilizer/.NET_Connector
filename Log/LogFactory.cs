@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 using MWS.Helper;
 
@@ -8,11 +9,6 @@ namespace MWS.Log
     {
         private static ArrayList _logs;
 
-        // public logs
-        public static WindowsLog Log;
-        public static LogInterface Console;
-
-
         static LogFactory()
         {
             Initialize();
@@ -20,15 +16,8 @@ namespace MWS.Log
 
         static void Initialize()
         {
-            // service logs
-            Log = Singleton<WindowsLog>.Instance;
-            Console = Singleton<ConsoleLog>.Instance; 
-
             // internal logs
             _logs = new ArrayList();
-
-            // register logs
-            // RegisterLog(Log);
         }
 
         public static void RegisterLog(LogInterface log)
@@ -41,26 +30,63 @@ namespace MWS.Log
 
         public static void WriteInfo(string message)
         {
+            WriteInfo(message);
+        }
+
+        private static void WriteInfo(DateTime date, string message)
+        {
             foreach (LogInterface log in _logs)
             {
-                log.WriteInfo(message);
+                log.WriteInfo(date, message);
             }
         }
 
         public static void WriteWarning(string message)
         {
+            WriteWarning(DateTime.Now, message);
+        }
+
+        private static void WriteWarning(DateTime date, string message)
+        {
             foreach (LogInterface log in _logs)
             {
-                log.WriteWarning(message);
+                log.WriteWarning(date, message);
             }
         }
 
         public static void WriteError(string message)
         {
+            WriteError(DateTime.Now, message);
+        }
+
+        private static void WriteError(DateTime date, string message)
+        {
             foreach (LogInterface log in _logs)
             {
-                log.WriteError(message);
+                log.WriteError(DateTime.Now, message);
             }
+        }
+
+        public static void WriteEntry(MovilizerStatusMessage statusMessage)
+        {
+            switch (statusMessage.severity)
+            {
+                case 2: // warning=2
+                    WriteWarning(statusMessage.timestamp, statusMessage.message);
+                    break;
+                case 3:
+                case 4: // error=3, fatal=4
+                    WriteError(statusMessage.timestamp, statusMessage.message);
+                    break;
+                default: // debug=-1, info=1
+                    WriteInfo(statusMessage.timestamp, statusMessage.message);
+                    break;
+            }
+        }
+
+        public static void WriteEntry(MovilizerMoveletError moveletError)
+        {
+            WriteError(moveletError.timestamp, moveletError.message);
         }
     }
 }
