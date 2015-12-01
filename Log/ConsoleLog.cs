@@ -21,12 +21,16 @@ namespace MWS.Log
 
         public void WriteWarning(DateTime date, string message)
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             this.WriteEntry(date, message);
+            Console.ResetColor();
         }
 
         public void WriteError(DateTime date, string message)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             this.WriteEntry(date, message);
+            Console.ResetColor();
         }
     }
 }

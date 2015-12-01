@@ -10,7 +10,7 @@ namespace MWS.WebService
         // movilizer specific constants
         private const string WS_PROTOCOL = @"http";
         private const string WS_RELATIVE_PATH = @"/MovilizerDistributionService/WebService/";
-        public  const string WS_NAMESPACE = "http://movilitas.com/movilizer/v11";
+        public  const string WS_NAMESPACE = "http://movilitas.com/movilizer/v14";
 
         private static string _webServiceProxyAddress;
         private static WebProxy _webServiceProxy;

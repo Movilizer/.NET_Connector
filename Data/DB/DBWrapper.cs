@@ -343,9 +343,9 @@ namespace MWS.Data
 		public static DBWrapper GetADONETWrapper()
 		{
 			DBWrapper oDB							= new DBWrapper();
-			oDB.ProviderAssemblyName				= System.Configuration.ConfigurationSettings.AppSettings["ADONET_ASSEMBLY"];
-			oDB.ProviderConnectionClassName			= System.Configuration.ConfigurationSettings.AppSettings["ADONET_CONNECTION_CLASS"];
-			oDB.ProviderCommandBuilderClassName		= System.Configuration.ConfigurationSettings.AppSettings["ADONET_COMMANDBUILDER_CLASS"];
+			oDB.ProviderAssemblyName				= System.Configuration.ConfigurationManager.AppSettings["ADONET_ASSEMBLY"];
+			oDB.ProviderConnectionClassName			= System.Configuration.ConfigurationManager.AppSettings["ADONET_CONNECTION_CLASS"];
+			oDB.ProviderCommandBuilderClassName		= System.Configuration.ConfigurationManager.AppSettings["ADONET_COMMANDBUILDER_CLASS"];
 			oDB.m_eProvider							= PROVIDER_TYPE.PROVIDER_OTHER;
 
 			return oDB;			

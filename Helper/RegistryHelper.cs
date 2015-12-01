@@ -47,10 +47,7 @@ namespace MWS.Helper
             return value;
         }
 
-        public static string ReadString(string rootKey, string name)
-        {
-            return ReadString(rootKey, name, null);
-        }
+        public static string ReadString(string rootKey, string name) => ReadString(rootKey, name, null);
 
         public static string ReadString(string rootKey, string name, string defaultValue)
         {
@@ -69,10 +66,7 @@ namespace MWS.Helper
             return (string)value;
         }
 
-        public static string ReadProtectedString(string rootKey, string name, string entropy)
-        {
-            return ReadProtectedString(rootKey, name, null, entropy);
-        }
+        public static string ReadProtectedString(string rootKey, string name, string entropy) => ReadProtectedString(rootKey, name, null, entropy);
 
         public static string ReadProtectedString(string rootKey, string name, string defaultValue, string entropy)
         {
@@ -112,10 +106,7 @@ namespace MWS.Helper
             return null;
         }
 
-        public static int ReadInt(string rootKey, string name)
-        {
-            return ReadInt(rootKey, name, null);
-        }
+        public static int ReadInt(string rootKey, string name) => ReadInt(rootKey, name, null);
 
         public static int ReadInt(string rootKey, string name, string defaultValue)
         {
@@ -136,10 +127,7 @@ namespace MWS.Helper
             }
         }
 
-        public static long ReadLong(string rootKey, string name)
-        {
-            return ReadLong(rootKey, name, null);
-        }
+        public static long ReadLong(string rootKey, string name) => ReadLong(rootKey, name, null);
 
         public static long ReadLong(string rootKey, string name, string defaultValue)
         {

@@ -18,10 +18,7 @@ namespace MWS.Helper
                 return dbResult.ToString();
             }
 
-        public static object ToNull(object dbResult)
-        {
-            return dbResult is DBNull ? null : dbResult;
-        }
+        public static object ToNull(object dbResult) => dbResult is DBNull ? null : dbResult;
 
         public static string FormatTableName(string tableName)
         {

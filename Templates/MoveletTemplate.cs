@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using MWS.Helper;
+using MWS.Movilizer;
 
 namespace MWS.Templates
 {

@@ -5,20 +5,11 @@ namespace MWS.Helper
 {
     public static class DateTimeHelper
     {
-        public static int GetYear()
-        {
-            return CultureInfo.CurrentCulture.Calendar.GetYear(DateTime.Now);
-        }
+        public static int GetYear() => CultureInfo.CurrentCulture.Calendar.GetYear(DateTime.Now);
 
-        public static int GetWeekOfYear()
-        {
-            return CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstDay, DayOfWeek.Monday) - 1;
-        }
+        public static int GetWeekOfYear() => CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstDay, DayOfWeek.Monday) - 1;
 
-        public static string FormatDate(DateTime dt)
-        {
-            return dt.ToString("d", CultureInfo.CurrentCulture.DateTimeFormat);
-        }
+        public static string FormatDate(DateTime dt) => dt.ToString("d", CultureInfo.CurrentCulture.DateTimeFormat);
 
         public static DateTime ToDateTime(long timestamp)
         {
@@ -42,9 +33,6 @@ namespace MWS.Helper
             }
         }
 
-        public static string GetTimestamp(bool forFilename)
-        {
-            return GetTimestamp(DateTime.Now, forFilename);
-        }
+        public static string GetTimestamp(bool forFilename) => GetTimestamp(DateTime.Now, forFilename);
     }
 }

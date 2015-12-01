@@ -2,6 +2,7 @@
 using System.Collections;
 
 using MWS.Helper;
+using MWS.Movilizer;
 
 namespace MWS.Log
 {
@@ -30,7 +31,7 @@ namespace MWS.Log
 
         public static void WriteInfo(string message)
         {
-            WriteInfo(message);
+            WriteInfo(DateTime.Now, message);
         }
 
         private static void WriteInfo(DateTime date, string message)

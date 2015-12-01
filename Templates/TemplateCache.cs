@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using MWS.Helper;
 using MWS.WebService;
+using MWS.Movilizer;
 
 namespace MWS.Templates
 {

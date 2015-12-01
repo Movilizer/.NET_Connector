@@ -7,25 +7,13 @@ namespace MWS.Helper
 {
     public static class StringHelper
     {
-        public static String UTF8ByteArrayToString(Byte[] characters)
-        {
-            return new UTF8Encoding().GetString(characters);
-        }
+        public static String UTF8ByteArrayToString(Byte[] characters) => new UTF8Encoding().GetString(characters);
 
-        public static Byte[] StringToUTF8ByteArray(String pXmlString)
-        {
-            return new UTF8Encoding().GetBytes(pXmlString);
-        }
+        public static Byte[] StringToUTF8ByteArray(String pXmlString) => new UTF8Encoding().GetBytes(pXmlString);
+      
+        public static string NormalizeString(string str) => str.Trim().Replace("\"", "''").Replace("\r\n", " ");
 
-        public static string NormalizeString(string str)
-        {
-            return str.Trim().Replace("\"", "''").Replace("\r\n", " ");
-        }
-
-        public static string ToNoDate(string dateStr)
-        {
-            return dateStr.Length > 0 ? dateStr : "<kein Datum>";
-        }
+        public static string ToNoDate(string dateStr) => dateStr.Length > 0 ? dateStr : "<kein Datum>";
 
         public static string ToHexString(byte[] ba)
         {
@@ -113,14 +101,8 @@ namespace MWS.Helper
             return ToHexString(buffer);
         }
 
-        public static bool IsEmpty(string str)
-        {
-            return str == null || str.Trim().Length == 0;
-        }
+        public static bool IsEmpty(string str) => string.IsNullOrWhiteSpace(str); 
 
-        public static string ToNotNull(string str)
-        {
-            return str != null ? str : "";
-        }
+        public static string ToNotNull(string str) => str != null ? str : "";
     }
 }

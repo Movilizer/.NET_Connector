@@ -48,15 +48,9 @@ namespace MWS.Helper
             System.Text.StringBuilder lpData,
             ref uint lpcbData);
 
-        static public string GetRegKey64(UIntPtr inHive, String inKeyName, String inPropertyName)
-        {
-            return GetRegKey64(inHive, inKeyName, RegSAM.WOW64_64Key, inPropertyName);
-        }
+        static public string GetRegKey64(UIntPtr inHive, String inKeyName, String inPropertyName) => GetRegKey64(inHive, inKeyName, RegSAM.WOW64_64Key, inPropertyName);
 
-        static public string GetRegKey32(UIntPtr inHive, String inKeyName, String inPropertyName)
-        {
-            return GetRegKey64(inHive, inKeyName, RegSAM.WOW64_32Key, inPropertyName);
-        }
+        static public string GetRegKey32(UIntPtr inHive, String inKeyName, String inPropertyName) => GetRegKey64(inHive, inKeyName, RegSAM.WOW64_32Key, inPropertyName);
 
         static public string GetRegKey64(UIntPtr inHive, String inKeyName, RegSAM in32or64key, String inPropertyName)
         {
