@@ -25,10 +25,7 @@ namespace MWS.WindowsService
 
         public string SystemPassword { get; set; }
 
-        public string WebServiceHost
-        {
-            get { return "demo.movilizer.com"; }
-        }
+        public string WebServiceHost { get; set; }
 
         public string WebServiceProtocol
         {

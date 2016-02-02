@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ba91d6cb-c0d5-4315-b624-dd4fa296ce46" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4de5f8b2-45f6-44a8-8fad-b0fd11b1f689" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
-    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
@@ -21,7 +22,7 @@
     <MetadataSource Address="https://movilizer.com:443/MovilizerDistributionService/MovilizerV14Wsdl11.wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MovilizerV14Wsdl112.wsdl" MetadataType="Wsdl" ID="b1e4ef23-c90b-464e-8152-ba53bf64c477" SourceId="1" SourceUrl="https://movilizer.com/MovilizerDistributionService/MovilizerV14Wsdl11.wsdl" />
+    <MetadataFile FileName="MovilizerV14Wsdl11.wsdl" MetadataType="Wsdl" ID="df80c13e-5553-406d-b1f5-cf7ab49578ee" SourceId="1" SourceUrl="https://movilizer.com/MovilizerDistributionService/MovilizerV14Wsdl11.wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

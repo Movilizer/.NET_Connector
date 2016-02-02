@@ -89,12 +89,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\AssignmentBoardHelper.cs" />
     <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="Service References\Movilizer\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Templates\ParticipantConfigurationTemplate.cs" />
     <Compile Include="WindowsService\Configurators\GenericConfigurator.cs" />
     <Compile Include="WindowsService\Configurators\AppConfigConfigurator.cs" />
     <Compile Include="WindowsService\Configurators\RegistryConfigurator.cs" />
@@ -183,8 +185,10 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Service References\Movilizer\MovilizerV14Wsdl11.wsdl" />
-    <None Include="Service References\Movilizer\MovilizerV14Wsdl112.wsdl" />
     <None Include="Service References\Movilizer\MWS.Movilizer.MovilizerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Movilizer\MWS.Movilizer.MovilizerResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="WindowsService\App.config" />

@@ -147,7 +147,7 @@ namespace MWS.WebService
             _outQueue.Enqueue(this.CreateMoveletAssignment(moveletKey, moveletKeyExt, uname, phone));
         }
 
-        public void EnqueueMoveletDeletion(string moveletKey, string moveletKeyExt)
+        public void EnqueueMoveletDeletion(string moveletKey, string moveletKeyExt = null)
         {
             // create movelet deletion
             _outQueue.Enqueue(this.CreateMoveletDelete(moveletKey, moveletKeyExt));
@@ -249,6 +249,7 @@ namespace MWS.WebService
             EnqueueInboundQueueObjects(response.uploadContainer);
             EnqueueInboundQueueObjects(response.masterdataAck);
             EnqueueInboundQueueObjects(response.masterdataDeleted);
+            EnqueueInboundQueueObjects(response.participantAck);
 
             // save acknowledge key for the next request
             _requestAckKey = response.requestAcknowledgeKey;
