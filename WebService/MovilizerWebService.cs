@@ -38,7 +38,7 @@ namespace MWS.WebService
 
 
         private MovilizerWebService()
-            : base(new BasicHttpBinding(BasicHttpSecurityMode.Transport) { MaxReceivedMessageSize = 5242880, SendTimeout = new TimeSpan(0, 5, 0), MaxBufferSize = 5242880 },
+            : base(new BasicHttpBinding(BasicHttpSecurityMode.Transport) { MaxReceivedMessageSize = 2147483647, SendTimeout = new TimeSpan(0, 5, 0)},
                     new EndpointAddress(MovilizerWebServiceConstants.GetWebServiceUrl()))
         {
             // initialize queues
