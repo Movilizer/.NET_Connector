@@ -101,7 +101,10 @@ namespace MWS.Helper
             return ToHexString(buffer);
         }
 
-        public static bool IsEmpty(string str) => string.IsNullOrWhiteSpace(str); 
+        public static bool IsEmpty(string str)
+        {
+            return String.IsNullOrEmpty(str.Trim(' '));
+        }
 
         public static string ToNotNull(string str) => str != null ? str : "";
     }

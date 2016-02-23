@@ -1,9 +1,4 @@
-﻿using MWS.Movilizer;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MWS.Templates
+﻿namespace MWS.Templates
 {
     public class MasterdataReferenceTemplate
     {

@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
 
-using MWS.Helper;
-using MWS.Movilizer;
-
 namespace MWS.Log
 {
     public static class LogFactory

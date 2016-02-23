@@ -8,13 +8,11 @@ using MWS.Helper;
 using MWS.Log;
 using MWS.Templates;
 using MWS.WindowsService;
-using MWS.Movilizer;
-using System.ServiceModel;
+
 
 namespace MWS.WebService
 {
-    public partial class MovilizerWebService : Movilizer.MovilizerWebServiceV14Client
-    {
+    public partial class MovilizerWebService : MovilizerWebServiceV14Service { 
         private Queue _inQueue;
         private Queue _outQueue;
 
@@ -38,10 +36,9 @@ namespace MWS.WebService
 
 
         private MovilizerWebService()
-            : base(new BasicHttpBinding(BasicHttpSecurityMode.Transport) { MaxReceivedMessageSize = 2147483647, SendTimeout = new TimeSpan(0, 5, 0)},
-                    new EndpointAddress(MovilizerWebServiceConstants.GetWebServiceUrl()))
+            : base()
         {
-            // initialize queues
+            this.Url = MovilizerWebServiceConstants.GetWebServiceUrl();
             _inQueue = new Queue();
             _outQueue = new Queue();
 

@@ -6,16 +6,15 @@ using System.Data.OleDb;
 using System.Data.Odbc;
 //using System.Data.OracleClient;
 using System.Reflection;
-using System.Runtime.Remoting;
 using System.Threading;
 
 
 namespace MWS.Data
 {
-	/// <summary>
+    /// <summary>
     /// Summary description for DBWrapper.
-	/// </summary>
-	public class DBWrapper : IDisposable
+    /// </summary>
+    public class DBWrapper : IDisposable
 	{
 		#region Constructors / finalizer methods
 

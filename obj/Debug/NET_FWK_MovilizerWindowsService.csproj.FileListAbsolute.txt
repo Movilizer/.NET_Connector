@@ -6,3 +6,11 @@ C:\BitBucket\template\dotNET\Development\.NET_Connector-master\obj\Debug\NET_FWK
 C:\BitBucket\template\dotNET\Development\.NET_Connector-master\obj\Debug\MWSCore.dll
 C:\BitBucket\template\dotNET\Development\.NET_Connector-master\obj\Debug\MWSCore.pdb
 C:\BitBucket\template\dotNET\Development\.NET_Connector-master\obj\Debug\NET_FWK_MovilizerWindowsService.csprojResolveAssemblyReference.cache
+C:\BitBucket\.NET_Connector\bin\Debug\MWSCore.dll.config
+C:\BitBucket\.NET_Connector\bin\Debug\MWSCore.dll
+C:\BitBucket\.NET_Connector\bin\Debug\MWSCore.pdb
+C:\BitBucket\.NET_Connector\obj\Debug\NET_FWK_MovilizerWindowsService.csprojResolveAssemblyReference.cache
+C:\BitBucket\.NET_Connector\obj\Debug\MWS.WindowsService.MovilizerWindowsService.resources
+C:\BitBucket\.NET_Connector\obj\Debug\NET_FWK_MovilizerWindowsService.csproj.GenerateResource.Cache
+C:\BitBucket\.NET_Connector\obj\Debug\MWSCore.dll
+C:\BitBucket\.NET_Connector\obj\Debug\MWSCore.pdb

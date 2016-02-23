@@ -1,8 +1,4 @@
-﻿using MWS.Movilizer;
-using System.Collections.Generic;
-
-
-namespace MWS.Templates
+﻿namespace MWS.Templates
 {
     public class DocumentDeleteTemplate
     {

@@ -1,5 +1,4 @@
-﻿using MWS.Movilizer;
-namespace MWS.Templates
+﻿namespace MWS.Templates
 {
     public class MasterdataDeleteTemplate
     {

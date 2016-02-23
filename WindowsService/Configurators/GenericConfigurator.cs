@@ -1,10 +1,4 @@
-﻿using MWS.WindowsService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace MWS.WindowsService
+﻿namespace MWS.WindowsService
 {
     /// <summary>
     /// Description of <see cref="GenericConfigurator"/>

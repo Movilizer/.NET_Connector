@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MWS</RootNamespace>
     <AssemblyName>MWSCore</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>
     </StartupObject>
@@ -91,11 +91,6 @@
   <ItemGroup>
     <Compile Include="Helper\AssignmentBoardHelper.cs" />
     <Compile Include="Helper\FileHelper.cs" />
-    <Compile Include="Service References\Movilizer\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Templates\ParticipantConfigurationTemplate.cs" />
     <Compile Include="WindowsService\Configurators\GenericConfigurator.cs" />
     <Compile Include="WindowsService\Configurators\AppConfigConfigurator.cs" />
@@ -138,6 +133,7 @@
     <Compile Include="WebService\MovilizerWebService.cs" />
     <Compile Include="WebService\MovilizerWebServiceConstants.cs" />
     <Compile Include="WindowsService\IConfigurator.cs" />
+    <Compile Include="WebService\MovilizerWebServiceV14Service.cs" />
     <Compile Include="WindowsService\MovilizerWindowsService.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -180,33 +176,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Service References\Movilizer\MovilizerV14Wsdl11.wsdl" />
-    <None Include="Service References\Movilizer\MWS.Movilizer.MovilizerResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Movilizer\MWS.Movilizer.MovilizerResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="WindowsService\App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\Movilizer\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Movilizer\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Movilizer\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Movilizer\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

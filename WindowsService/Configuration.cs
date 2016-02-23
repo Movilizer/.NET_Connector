@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
-
-using MWS.Helper;
 
 namespace MWS.WindowsService
 {

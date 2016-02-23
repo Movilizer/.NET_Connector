@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace MWS.WindowsService
+﻿namespace MWS.WindowsService
 {
     /// <summary>
     /// Description of interface <see cref="IConfigurator"/>

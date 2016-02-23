@@ -1,5 +1,4 @@
-﻿using MWS.Movilizer;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 
 namespace MWS.Templates

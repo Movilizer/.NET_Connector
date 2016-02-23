@@ -3,7 +3,6 @@
 using MWS.Templates;
 using MWS.WebService;
 using MWS.WindowsService;
-using MWS.Movilizer;
 using System.Collections.Generic;
 using MWS.Helper;
 
@@ -23,10 +22,11 @@ namespace MWS.Data
         }
 
         /// <summary>
-        /// DEPRICATED: supports legacy versions of the .NET Connector in which the MovilizerWebService instance was passed as a parameter.
+        /// DEPRECATED: supports legacy versions of the .NET Connector in which the MovilizerWebService instance was passed as a parameter.
         /// The Configuration needs to be loaded before calling this Constructor.
         /// </summary>
         /// <param name="service"></param>
+        [Obsolete("This method is deprecated, when possible start using other constructors: base(IConfigurator configuration) or base()")]
         public Manager(MovilizerWebService service)
         {
             Configuration.ReadConfiguration(new RegistryConfigurator());
@@ -197,10 +197,8 @@ namespace MWS.Data
         public void SendParticipantConfigurationsUpdate(List<MovilizerParticipantConfiguration> participantConfigurations) => 
             participantConfigurations.ForEach(mpc => _service.EnqueueParticipantConfiguration(mpc));
 
-
         public void AssignMoveletTo(List<MovilizerMoveletAssignment> assignments) =>
              assignments.ForEach(mma => _service.EnqueueMoveletAssignment(mma));
-
 
         public abstract void RunServiceCycle();
     }
