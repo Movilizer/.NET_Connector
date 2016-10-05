@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Helper\AssignmentBoardHelper.cs" />
     <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Log\FileLog.cs" />
     <Compile Include="Templates\ParticipantConfigurationTemplate.cs" />
     <Compile Include="WindowsService\Configurators\GenericConfigurator.cs" />
     <Compile Include="WindowsService\Configurators\AppConfigConfigurator.cs" />

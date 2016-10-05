@@ -252,12 +252,14 @@ namespace MWS.WebService
             _requestAckKey = response.requestAcknowledgeKey;
         }
 
-        public MovilizerResponse PostMovilizerRequest(bool synchronousReponse = false, int numResponses = 1000)
+        public MovilizerResponse PostMovilizerRequest(bool synchronousReponse = false, int numResponses = 1000, string requestTrackingKey = "")
         {
+            this.Url = MovilizerWebServiceConstants.GetWebServiceUrl();
             // create request object
             MovilizerRequest request = this.ComposeRequest();
             request.synchronousResponse = synchronousReponse;
             request.numResponses = numResponses;
+            request.requestTrackingKey = requestTrackingKey;
 
             string debugOutput = Configuration.GetDebugOutputPath();
             if (!String.IsNullOrEmpty(debugOutput))

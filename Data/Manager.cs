@@ -51,8 +51,8 @@ namespace MWS.Data
         public void RollbackTransaction() =>
             _service.RollbackTransaction();
 
-        public void PostMovilizerRequest() =>
-            _service.PostMovilizerRequest();
+        public void PostMovilizerRequest(bool synchronousReponse, int numResponses, string requestTrackingKey) =>
+            _service.PostMovilizerRequest(synchronousReponse, numResponses, requestTrackingKey);
 
         public void AssignMoveletTo(string moveletKey, string phone) =>
             _service.EnqueueMoveletAssignment(moveletKey, null, phone, phone);
