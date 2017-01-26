@@ -60,8 +60,8 @@ namespace MWS.WindowsService
 
         private static long _systemId;
         private static string _systemPassword;
-        private static string _encryptionAlgorithm;
-        private static string _encryptionPassword;
+        private static string _encryptionAlgorithm = string.Empty;
+        private static string _encryptionPassword = string.Empty;
         private static string _webServiceHost;
         private static string _webServiceProxy;
         private static string _webServiceProtocol;

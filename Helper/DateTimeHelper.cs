@@ -34,5 +34,10 @@ namespace MWS.Helper
         }
 
         public static string GetTimestamp(bool forFilename) => GetTimestamp(DateTime.Now, forFilename);
+
+        public static double GetCurrentTimestampSeconds()
+        {
+            return (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0)).TotalSeconds;
+        }
     }
 }
