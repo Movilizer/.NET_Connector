@@ -12,7 +12,7 @@ using MWS.WindowsService;
 
 namespace MWS.WebService
 {
-    public partial class MovilizerWebService : MovilizerWebServiceV14Service { 
+    public partial class MovilizerWebService : MovilizerWebServiceV16Service { 
         private Queue _inQueue;
         private Queue _outQueue;
 
